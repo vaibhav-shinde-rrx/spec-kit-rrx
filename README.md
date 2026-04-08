@@ -32,7 +32,7 @@ Run these from your **application repo root** (the project where you use Spec Ki
 Replace the URL with your tagged release archive:
 
 ```bash
-[specify extension add rrx --from https://github.com/YOUR_ORG/spec-kit-rrx/archive/refs/tags/v0.1.0.zip](https://github.com/vaibhav-shinde-rrx/spec-kit-rrx/archive/refs/tags/v0.1.0.zip)
+specify extension add rrx --from https://github.com/vaibhav-shinde-rrx/spec-kit-rrx/archive/refs/tags/v0.1.0.zip
 ```
 
 ### Method 2 — Local development (same as V-Model / QA examples)

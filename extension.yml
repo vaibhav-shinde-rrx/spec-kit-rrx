@@ -5,10 +5,10 @@ extension:
   name: "RRX — Spec-Driven Testing"
   version: "0.1.0"
   description: "Test planning, automation, and release-readiness proof aligned to spec.md acceptance criteria (AC/TC traceability)."
-  author: "Your team"
-  repository: "https://github.com/your-org/spec-kit-rrx"
+  author: "RRX-Connected-solutions"
+  repository: "https://github.com/vaibhav-shinde-rrx/spec-kit-rrx"
   license: "MIT"
-  homepage: "https://github.com/your-org/spec-kit-rrx"
+  homepage: "https://github.com/vaibhav-shinde-rrx/spec-kit-rrx"
 
 requires:
   speckit_version: ">=0.1.0"

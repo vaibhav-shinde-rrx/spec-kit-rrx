@@ -1,0 +1,43 @@
+schema_version: "1.0"
+
+extension:
+  id: "rrx"
+  name: "RRX — Spec-Driven Testing"
+  version: "0.1.0"
+  description: "Test planning, automation, and release-readiness proof aligned to spec.md acceptance criteria (AC/TC traceability)."
+  author: "Your team"
+  repository: "https://github.com/your-org/spec-kit-rrx"
+  license: "MIT"
+  homepage: "https://github.com/your-org/spec-kit-rrx"
+
+requires:
+  speckit_version: ">=0.1.0"
+
+provides:
+  commands:
+    - name: "speckit.rrx.spec"
+      file: "commands/speckit.rrx.spec.md"
+      description: "Generate test bundle (test cases, trace matrix, automation notes, CI hints) from spec.md"
+    - name: "speckit.rrx.automate"
+      file: "commands/speckit.rrx.automate.md"
+      description: "Generate runnable tests from rrx/test-cases.md using scanned implementation and fixture library"
+    - name: "speckit.rrx.prove"
+      file: "commands/speckit.rrx.prove.md"
+      description: "Map junit.xml results to ACs; update trace matrix; emit release-readiness verdict"
+
+hooks:
+  after_specify:
+    command: "speckit.rrx.spec"
+    optional: true
+    prompt: "Run RRX test planning (/speckit.rrx.spec) to lock AC→TC intent before plan?"
+    description: "Produces rrx/test-cases.md and traceability artifacts after specification"
+  after_implement:
+    command: "speckit.rrx.automate"
+    optional: true
+    prompt: "Generate or merge automated tests from the RRX bundle (/speckit.rrx.automate)?"
+    description: "Creates or updates test files from rrx/test-cases.md after implementation"
+
+tags:
+  - "testing"
+  - "traceability"
+  - "qa"
